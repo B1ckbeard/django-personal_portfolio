@@ -1,1 +1,7 @@
-<h1>Hello</h1>
+<h1>Projects:</h1>
+{%  for object in objects  %}
+<div>
+  <h2>{{  object.title  }}</h2>
+  <h3>{{  object.description}}</h3>
+</div>
+{%  endfor  %}
