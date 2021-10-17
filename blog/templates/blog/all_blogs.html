@@ -1,8 +1,11 @@
+<a href="{%  url 'home'  %}">Back to home page</a>
 <h1>Blog</h1>
-{%  for post in posts  %}
+{%  for blog in blogs  %}
 <div>
-  <h2>{{  post.title  }}</h2>
-  <p>{{  post.text  }}</p>
+  <h2>{{  blog.title  }}</h2>
+  <h5>{{  blog.date  }}</h5>
+  <p>{{  blog.text  }}</p>
+  <a href="{{  blog.id  }}/">Detail</a>
   <br>
   <br>
 </div>
