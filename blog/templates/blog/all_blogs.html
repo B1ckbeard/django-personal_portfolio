@@ -1,11 +1,10 @@
-<a href="{%  url 'home'  %}">Back to home page</a>
+<a href="{%  url 'portfolio:home'  %}">Back to home page</a>
 <h1>Blog</h1>
 {%  for blog in blogs  %}
 <div>
-  <h2>{{  blog.title  }}</h2>
+  <a href="{% url 'blog:detail' blog.id %}"><h2>{{  blog.title  }}</h2></a>
   <h5>{{  blog.date  }}</h5>
   <p>{{  blog.text  }}</p>
-  <a href="{{  blog.id  }}/">Detail</a>
   <br>
   <br>
 </div>
