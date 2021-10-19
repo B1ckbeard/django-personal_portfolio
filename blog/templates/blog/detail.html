@@ -1,5 +1,9 @@
-<h2>{{  blog.title  }}</h2>
-<p>{{  blog.date }}</p>
-<p>{{  blog.text  }}</p>
-<br>
-<a href="{%  url 'blog:all_blogs'  %}">Back</a>
+{%  extends 'portfolio/base.html'  %}
+
+{%  block content  %}
+
+  <h1>{{  blog.title  }}</h1>
+  <h4>--{{  blog.date|date:'F jS Y' }}--</h4>
+  <p>{{  blog.text|safe  }}</p>
+  <a href="{%  url 'blog:all_blogs'  %}">Back</a>
+{%  endblock  %}

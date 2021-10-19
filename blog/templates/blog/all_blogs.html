@@ -1,11 +1,15 @@
-<a href="{%  url 'portfolio:home'  %}">Back to home page</a>
+{%  extends 'portfolio/base.html'  %}
+{%  block content  %}
+<br>
 <h1>Blog</h1>
+<h4>Total number of post{{  blogs.count|pluralize  }}: <b>{{  blogs.count  }}</b></h4>
+<br>
 {%  for blog in blogs  %}
 <div>
   <a href="{% url 'blog:detail' blog.id %}"><h2>{{  blog.title  }}</h2></a>
-  <h5>{{  blog.date  }}</h5>
-  <p>{{  blog.text  }}</p>
-  <br>
+  <h5>{{  blog.date|date:'d M Y'  }}</h5>
+  <p>{{  blog.text|safe|truncatechars:100  }}</p>
   <br>
 </div>
 {%  endfor  %}
+{%  endblock  %}
