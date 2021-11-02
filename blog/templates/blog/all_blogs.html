@@ -1,14 +1,23 @@
 {%  extends 'portfolio/base.html'  %}
 {%  block content  %}
 <br>
-<h1>Blog</h1>
-<h4>Total number of post{{  blogs.count|pluralize  }}: <b>{{  blogs.count  }}</b></h4>
-<br>
+<h1 class="text-center">Blog</h1>
+<hr class="featurette-divider">
 {%  for blog in blogs  %}
 <div>
-  <a href="{% url 'blog:detail' blog.id %}"><h2>{{  blog.title  }}</h2></a>
-  <h5>{{  blog.date|date:'d M Y'  }}</h5>
-  <p>{{  blog.text|safe|truncatechars:100  }}</p>
+  <h3 class="text-center">
+    <a href="{% url 'blog:detail' blog.id %}">
+    {{  blog.title  }}
+    </a>
+  </h3>
+  <h6 class="text-center">
+    {{  blog.date|date:'d M Y'  }}
+  </h6>
+  <div class="text-center">
+    <p class="text-center">
+      {{  blog.text|truncatechars:100|safe  }}
+    </p>
+  </div>
   <br>
 </div>
 {%  endfor  %}
