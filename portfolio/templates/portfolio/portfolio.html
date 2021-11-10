@@ -2,13 +2,13 @@
 {%  block content  %}
 <br>
 <h1 class="text-center">Portfolio</h1>
-
 <hr class="featurette-divider">
+
 
 {%  if projects  %}
 {%  for project in projects  %}
 <div class="card mb-3 align-items-center" style="max-width: 100%;">
-  <div class="row g-0">
+  <div class="row g-0 border">
     <div class="col-md-4">
       {%  for image in images  %}
       {%  if image.project_id == project.id  %}
@@ -37,6 +37,7 @@
       </div>
     </div>
   </div>
+  <br>
 </div>
 {%  endfor  %}
 {%  else %}
