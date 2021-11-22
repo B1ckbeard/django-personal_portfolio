@@ -6,7 +6,7 @@ def home(request):
     return render(request,'portfolio/home.html', {'projects': projects} )
 
 def portfolio(request):
-    projects = Project.objects.all()
+    projects = Project.objects.order_by('-id')
     images = Image.objects.all()
     return render(request, 'portfolio/portfolio.html', {'projects': projects, 'images': images})
 
