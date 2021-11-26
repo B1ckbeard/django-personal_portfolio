@@ -9,6 +9,10 @@
       <div class="position-relative">
         <img src="static/portfolio/back1.jpg" class="img-fluid">
         <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100 " style="background: rgba(0,0,0,0.6);">
+        </div>
+      </div>
+
+          <div class="container">
           <div class="row position-absolute top-50 start-50 translate-middle text-secondary px-4 py-3 text-center rounded" style="background: rgba(0,0,0,0.3);">
               <div class="col mx-auto">
                 <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
@@ -21,6 +25,8 @@
                   Contact with me
                 </a>
               </div>
+            </div>
+
               </div>
             </div>
           </div>
@@ -39,9 +45,9 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="card shadow bg-white w-75">
+            <div class="card shadow bg-white w-100">
               <div class="row">
-                <div class="col">
+                <div class="col-xs-12 col-lg-6">
                   <p class="text-center my-4">
                     <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
                   </p>
@@ -70,7 +76,7 @@
                     </div>
                   </div>
                   <div class="row my-3">
-                    <div class="col text-left">
+                    <div class="col">
                       <a href="{%  static 'portfolio/resume.pdf  '%}" class="btn btn-dark w-50">
                         Download resume
                       </a>
@@ -81,8 +87,8 @@
             </div>
         </div>
         <div class="row justify-content-center">
-          <div class="card bg-white w-75 shadow">
-            <div class="text-left mx-3 my-4">
+          <div class="card bg-white w-100 shadow">
+            <div class="text-left mx-auto my-4">
               <p>Hello, I'm Dmitry.</p>
               <p>A young Python/Django backend developer.</p>
               <p>I am actively engaged in self-education, study programming courses and materials and have several certificates.</p>
@@ -99,7 +105,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-            <div class="card bg-white w-75 shadow">
+            <div class="card bg-white w-100 shadow">
               <div class="row justify-content-center mx-3 my-3 gap-3">
                 <div class="card" style="width: 28rem;">
                   <img src="static/portfolio/Udemy-Django(eng)(jpg).jpg" class="card-img" alt="...">
@@ -136,12 +142,12 @@
 
         {%  if projects  %}
         {%  for project in projects  %}
-        <div class="card bg-white w-75 shadow">
+        <div class="card bg-white w-100 shadow">
           <div class="row">
-            <div class="col py-3 d-grid">
+            <div class="col-xs-12 col-lg-6 py-3 d-grid">
               <img src="{{  project.img.url  }}" class="img-thumbnail rounded mx-auto d-block" width="400" alt="">
             </div>
-            <div class="col pt-1">
+            <div class="col-xs-12 col-lg-6 pt-1">
               <div class="card-body">
                 <h3 class="card-title">{{  project.title  }}</h3>
                 <p class="card-text">{{  project.description  }}</p>
