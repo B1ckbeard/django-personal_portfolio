@@ -2,12 +2,12 @@
 {%  block content  %}
 
 <div class="row">
-  <div class="col-6 py-3 d-grid gap-2">
+  <div class="col py-3 d-grid gap-2">
     {%  for image in images  %}
       <img src="{{  image.image.url  }}" class="img-thumbnail rounded mx-auto d-block" width=50% alt="">
     {%  endfor  %}
   </div>
-  <div class="col-6 pt-1">
+  <div class="col pt-1">
     <div class="card-body">
       <h3 class="card-title">{{  project.title  }}</h3>
       <p class="card-text">{{  project.description  }}</p>

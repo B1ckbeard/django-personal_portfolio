@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Project, Image
 
 def home(request):
-    projects = Project.objects.all()
+    projects = Project.objects.order_by('-id')
     return render(request,'portfolio/home.html', {'projects': projects} )
 
 def portfolio(request):

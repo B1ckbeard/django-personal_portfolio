@@ -4,30 +4,178 @@
 {%  load static  %}
 
 <body>
-
-  <div class="cover-container d-flex w-100 h-100 mx-auto " >
+  <div class="cover-container">
     <div class="bg-image">
       <div class="position-relative">
-      <img src="static/portfolio/back1.jpg" class="w-100">
+        <img src="static/portfolio/back1.jpg" class="img-fluid">
         <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100 " style="background: rgba(0,0,0,0.6);">
-          <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-50 h-50 ">
-            <div class="row justify-content-center align-items-center">
-              <div class="col">
-              <p class="text-center">
-              <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
-              </p>
-                <div class="text-white text-center">
-                  <h2 class="fw-light">Hello</h2>
-                  <h3 class="fw-light">I'm Dmitry</h3>
-                  <p class="lead text-muted">Junior Python/Django backend developer</p>
-                </div>
+          <div class="row position-absolute top-50 start-50 translate-middle text-secondary px-4 py-3 text-center rounded" style="background: rgba(0,0,0,0.3);">
+              <div class="col mx-auto">
+                <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
+                <h1 class="display-5 fw-bold text-white">Hello</h1>
+                <h2 class="fw-bold text-white">I'm Dmitry</h2>
+                <p class="fs-5 mb-4">
+                  Junior Python/Django backend developer
+                </p>
+                <a href="mailto:" class="btn btn-lg btn-outline-white text-white-50 border" role="button">
+                  Contact with me
+                </a>
               </div>
-            </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+
+    <div class="row justify-content-center bg-light">
+      <div class="col-12 pt-4 pb-5">
+
+        <h1 class="text-center py-4">
+          <strong>
+            ABOUT ME
+          </strong>
+        </h1>
+
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="card shadow bg-white w-75">
+              <div class="row">
+                <div class="col">
+                  <p class="text-center my-4">
+                    <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
+                  </p>
+                </div>
+                <div class="col">
+                  <h3 class="card-title text-left mt-4">
+                    <strong>
+                      Dmitry
+                    </strong>
+                  </h3>
+                  <p class="card-text text-muted text-left">Backend Python/Django developer.
+                  </p>
+                  <div class="row">
+                    <div class="col text-left">
+                      <a href="mailto:" class="btn" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
+                          <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z"/>
+                        </svg>
+                      </a>
+                      <a href="https://github.com/B1ckbeard" class="btn" role="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                          </path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col text-left">
+                      <a href="{%  static 'portfolio/resume.pdf  '%}" class="btn btn-dark w-50">
+                        Download resume
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="card bg-white w-75 shadow">
+            <div class="text-left mx-3 my-4">
+              <p>Hello, I'm Dmitry.</p>
+              <p>A young Python/Django backend developer.</p>
+              <p>I am actively engaged in self-education, study programming courses and materials and have several certificates.</p>
+              <p>Read educational programming literature such as:</p>
+              <ul>
+                <li>Django: Практика создания Web-сайтов на Python - Дронов В. А.</li>
+                <li>Изучаем Python. Программирование игр, визуализация данных, веб-приложения - Э. Мэтиз</li>
+                <li>Автоматизация рутинных задач с помощью Python: практическое руководство для начинающих - Эл Свейгарт</li>
+                <li>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих - Бхаргава Адитья</li>
+                <li>Сам себе программист - Альтхофф Кори</li>
+              </ul>
+              <p>Aimed at building a successful career in the field of programming</p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card bg-white w-75 shadow">
+              <div class="row justify-content-center mx-3 my-3 gap-3">
+                <div class="card" style="width: 28rem;">
+                  <img src="static/portfolio/Udemy-Django(eng)(jpg).jpg" class="card-img" alt="...">
+                </div>
+                <div class="card" style="width: 28rem;">
+                  <img src="static/portfolio/cert-Python Sololearn.png" class="card-img" alt="...">
+                </div>
+                <div class="card" style="width: 28rem;">
+                  <img src="static/portfolio/cert-Python-Stepic.png" class="card-img" alt="...">
+                </div>
+                <div class="card" style="width: 28rem;">
+                  <img src="static/portfolio/cert-html-Sololearn.jpg" class="card-img" alt="...">
+                </div>
+              </div>
+
+            </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+    <div class="row justify-content-center bg-secondary">
+      <div class="col-12 pt-4 pb-5">
+
+        <h1 class="text-center text-white py-4">
+          <strong>
+            PORTFOLIO
+          </strong>
+        </h1>
+
+        <div class="container">
+          <div class="row justify-content-center">
+
+        {%  if projects  %}
+        {%  for project in projects  %}
+        <div class="card bg-white w-75 shadow">
+          <div class="row">
+            <div class="col py-3 d-grid">
+              <img src="{{  project.img.url  }}" class="img-thumbnail rounded mx-auto d-block" width="400" alt="">
+            </div>
+            <div class="col pt-1">
+              <div class="card-body">
+                <h3 class="card-title">{{  project.title  }}</h3>
+                <p class="card-text">{{  project.description  }}</p>
+                <div class="row gap-1 text-center">
+                  <a class="btn btn-lg btn-outline-dark" href="{% url 'portfolio:detailProject' project.id %}" role="button">
+                    Details
+                  </a>
+                  {%  if project.git_url  %}
+                  <a class="btn btn-lg btn-outline-dark" href="{{  project.git_url  }}" role="button">
+                    GitHub
+                  </a>
+                  {%  endif %}
+                  {%  if project.site_url  %}
+                  <a class="btn btn-lg btn-outline-dark" href="{{  project.site_url  }}" role="button">
+                    Site
+                  </a>
+                  {%  endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+        {%  endfor  %}
+        {%  else %}
+        <h4 class="text-center">
+          No projects yet
+        </h4>
+        {%  endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 
