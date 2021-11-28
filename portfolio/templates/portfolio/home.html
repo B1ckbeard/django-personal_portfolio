@@ -4,40 +4,30 @@
 {%  load static  %}
 
 <body>
-  <div class="cover-container">
-    <div class="bg-image">
-      <div class="position-relative">
-        <img src="static/portfolio/back1.jpg" class="img-fluid">
-        <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100 " style="background: rgba(0,0,0,0.6);">
+  <div class="row justify-content-center position-relative">
+    <img src="static/portfolio/back1.jpg" alt="" class="img-fluid">
+    <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100 " style="background: rgba(0,0,0,0.6);">
+      <div class="text-secondary px-3 py-3 justify-content-center rounded" style="background: rgba(0,0,0,0.3);">
+        <div class="col-12 text-center">
+          <h1 class="display-5 fw-bold text-white">Hello</h1>
+          <h2 class="fw-bold text-white">I'm Dmitry</h2>
+          <p class="fs-5 mb-4">
+            Junior Python/Django backend developer
+          </p>
+          <a href="mailto:evsindi@blackbeard-dev.ru" class="btn btn-lg btn-outline-white text-white-50 border" role="button">
+            Contact with me
+          </a>
         </div>
       </div>
+    </div>
+  </div>
 
-          <div class="container">
-          <div class="row position-absolute top-50 start-50 translate-middle text-secondary px-4 py-3 text-center rounded" style="background: rgba(0,0,0,0.3);">
-              <div class="col mx-auto">
-                <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
-                <h1 class="display-5 fw-bold text-white">Hello</h1>
-                <h2 class="fw-bold text-white">I'm Dmitry</h2>
-                <p class="fs-5 mb-4">
-                  Junior Python/Django backend developer
-                </p>
-                <a href="mailto:" class="btn btn-lg btn-outline-white text-white-50 border" role="button">
-                  Contact with me
-                </a>
-              </div>
-            </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
     <div class="row justify-content-center bg-light">
       <div class="col-12 pt-4 pb-5">
 
-        <h1 class="text-center py-4">
+        <h1 class="text-center pt-3 pb-4">
           <strong>
             ABOUT ME
           </strong>
@@ -47,21 +37,22 @@
           <div class="row justify-content-center">
             <div class="card shadow bg-white w-100">
               <div class="row">
-                <div class="col-xs-12 col-lg-6">
+                <div class="col-12 col-lg-6">
                   <p class="text-center my-4">
                     <img class="rounded-circle" src="static/portfolio/photo.jpg" width="230" height="230" alt="">
                   </p>
                 </div>
-                <div class="col">
-                  <h3 class="card-title text-left mt-4">
+                <div class="col text-center text-lg-start mt-4">
+                  <h3 class="card-title">
                     <strong>
-                      Dmitry
+                      Dmitry Evsin
                     </strong>
                   </h3>
-                  <p class="card-text text-muted text-left">Backend Python/Django developer.
+                  <p class="card-text text-muted">
+                    Backend Python/Django developer.
                   </p>
                   <div class="row">
-                    <div class="col text-left">
+                    <div class="col text-center text-lg-start">
                       <a href="mailto:" class="btn" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
                           <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.818l5.724 3.465L8 8.917l1.276.766L15 6.218V5.4a1 1 0 0 0-.53-.882l-6-3.2zM15 7.388l-4.754 2.877L15 13.117v-5.73zm-.035 6.874L8 10.083l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738zM1 13.117l4.754-2.852L1 7.387v5.73zM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765l6-3.2z"/>
@@ -76,8 +67,8 @@
                     </div>
                   </div>
                   <div class="row my-3">
-                    <div class="col">
-                      <a href="{%  static 'portfolio/resume.pdf  '%}" class="btn btn-dark w-50">
+                    <div class="col text-center text-lg-start">
+                      <a href="{%  static 'portfolio/resume.pdf  '%}" class="btn btn-lg btn-outline-dark w-50">
                         Download resume
                       </a>
                     </div>
@@ -131,7 +122,7 @@
     <div class="row justify-content-center bg-secondary">
       <div class="col-12 pt-4 pb-5">
 
-        <h1 class="text-center text-white py-4">
+        <h1 class="text-center text-white pt-3 pb-4">
           <strong>
             PORTFOLIO
           </strong>
@@ -151,20 +142,24 @@
               <div class="card-body">
                 <h3 class="card-title">{{  project.title  }}</h3>
                 <p class="card-text">{{  project.description  }}</p>
-                <div class="row gap-1 text-center">
-                  <a class="btn btn-lg btn-outline-dark" href="{% url 'portfolio:detailProject' project.id %}" role="button">
+                <div class="row">
+                  <div class="col text-center">
+
+
+                  <a class="btn btn-lg btn-outline-dark w-50 mb-1" href="{% url 'portfolio:detailProject' project.id %}" role="button">
                     Details
                   </a>
                   {%  if project.git_url  %}
-                  <a class="btn btn-lg btn-outline-dark" href="{{  project.git_url  }}" role="button">
+                  <a class="btn btn-lg btn-outline-dark w-50" href="{{  project.git_url  }}" role="button">
                     GitHub
                   </a>
                   {%  endif %}
                   {%  if project.site_url  %}
-                  <a class="btn btn-lg btn-outline-dark" href="{{  project.site_url  }}" role="button">
+                  <a class="btn btn-lg btn-outline-dark w-50 mt-1" href="{{  project.site_url  }}" role="button">
                     Site
                   </a>
                   {%  endif %}
+                  </div>
                 </div>
               </div>
             </div>

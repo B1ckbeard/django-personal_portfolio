@@ -10,48 +10,52 @@
   </h1>
 
 <div class="row justify-content-center">
-  <div class="col-12 pt-4 pb-5">
+  <div class="col-12 pt-3 pb-4">
 
     <div class="container">
       <div class="row justify-content-center">
 
-    {%  if projects  %}
-    {%  for project in projects  %}
-    <div class="card bg-white w-100 shadow">
-      <div class="row">
-        <div class="col-xs-12 col-lg-6 py-3 d-grid">
-          <img src="{{ project.img.url }}" class="img-thumbnail rounded mx-auto d-block" width="400" alt="">
-        </div>
-        <div class="col-xs-12 col-lg-6 pt-1">
-          <div class="card-body">
-            <h3 class="card-title">{{  project.title  }}</h3>
-            <p class="card-text">{{  project.description  }}</p>
-            <div class="row gap-1 text-center">
-              <a class="btn btn-lg btn-outline-dark" href="{% url 'portfolio:detailProject' project.id %}" role="button">
-                Details
-              </a>
-              {%  if project.git_url  %}
-              <a class="btn btn-lg btn-outline-dark" href="{{  project.git_url  }}" role="button">
-                GitHub
-              </a>
-              {%  endif %}
-              {%  if project.site_url  %}
-              <a class="btn btn-lg btn-outline-dark" href="{{  project.site_url  }}" role="button">
-                Site
-              </a>
-              {%  endif %}
+        {%  if projects  %}
+        {%  for project in projects  %}
+        <div class="card bg-white w-100 shadow">
+          <div class="row">
+            <div class="col-xs-12 col-lg-6 py-3 d-grid">
+              <img src="{{  project.img.url  }}" class="img-thumbnail rounded mx-auto d-block" width="400" alt="">
+            </div>
+            <div class="col-xs-12 col-lg-6 pt-1">
+              <div class="card-body">
+                <h3 class="card-title">{{  project.title  }}</h3>
+                <p class="card-text">{{  project.description  }}</p>
+                <div class="row">
+                  <div class="col text-center">
+
+
+                  <a class="btn btn-lg btn-outline-dark w-50 mb-1" href="{% url 'portfolio:detailProject' project.id %}" role="button">
+                    Details
+                  </a>
+                  {%  if project.git_url  %}
+                  <a class="btn btn-lg btn-outline-dark w-50" href="{{  project.git_url  }}" role="button">
+                    GitHub
+                  </a>
+                  {%  endif %}
+                  {%  if project.site_url  %}
+                  <a class="btn btn-lg btn-outline-dark w-50 mt-1" href="{{  project.site_url  }}" role="button">
+                    Site
+                  </a>
+                  {%  endif %}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <br>
         </div>
-      </div>
-      <br>
-    </div>
-    {%  endfor  %}
-    {%  else %}
-    <h4 class="text-center">
-      No projects yet
-    </h4>
-    {%  endif %}
+        {%  endfor  %}
+        {%  else %}
+        <h4 class="text-center">
+          No projects yet
+        </h4>
+        {%  endif %}
 
   </div>
 </div>

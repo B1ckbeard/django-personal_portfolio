@@ -11,7 +11,7 @@
     {%  for blog in blogs  %}
     <div>
       <h3 class="text-center">
-        <a href="{% url 'blog:detail' blog.id %}">
+        <a href="{% url 'blog:detail' blog.id %}" class="link-dark">
         {{  blog.title  }}
         </a>
       </h3>
