@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-from pickle import FALSE
+from pickle import FALSE, TRUE
 #from tkinter import TRUE
 import dj_database_url
 
