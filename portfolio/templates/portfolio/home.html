@@ -1,16 +1,19 @@
 {%  extends 'portfolio/base.html'  %}
 
+<!-- head, header>nav из base.html -->
+
 {%  block content  %}
 {%  load static  %}
 
 <body>
+  <!-- 1 sector -->
   <div class="row justify-content-center position-relative">
     <img src="static/portfolio/back1.jpg" alt="" class="img-fluid">
     <div class="position-absolute top-0 left-0 d-flex justify-content-center align-items-center w-100 h-100 " style="background: rgba(0,0,0,0.6);">
       <div class="text-secondary px-3 py-3 justify-content-center rounded" style="background: rgba(0,0,0,0.3);">
         <div class="col-12 text-center">
-          <h1 class="display-5 fw-bold text-white">Hello</h1>
-          <h2 class="fw-bold text-white">I'm Dmitry</h2>
+          <h2 class="display-5 fw-bold text-white">Hello</h2>
+          <h3 class="fw-bold text-white">I'm Dmitry</h3>
           <p class="fs-5 mb-4">
             Junior Frontend developer.
           </p>
@@ -21,17 +24,13 @@
       </div>
     </div>
   </div>
-
-
-
+    <!-- sector about -->
     <div class="row justify-content-center bg-light">
-      <div class="col-12 pt-4 pb-5">
+      <div class="col-12">
 
-        <h1 class="text-center pt-3 pb-4">
-          <strong>
-            ABOUT ME
-          </strong>
-        </h1>
+        <h2 class="container_title">
+          About me
+        </h2>
 
         <div class="container">
           <div class="row justify-content-center">
@@ -44,9 +43,7 @@
                 </div>
                 <div class="col text-center text-lg-start mt-4">
                   <h3 class="card-title">
-                    <strong>
-                      Dmitry Evsin
-                    </strong>
+                    Dmitry Evsin
                   </h3>
                   <p class="card-text text-muted">
                     Frontend developer.
@@ -77,6 +74,7 @@
               </div>
             </div>
         </div>
+        <!-- резюме -->
         <div class="row justify-content-center">
           <div class="card bg-white w-100 shadow">
             <div class="text-left mx-auto my-4">
@@ -88,50 +86,31 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="card bg-white w-100 shadow">
-              <div class="row justify-content-center mx-3 my-3 gap-3">
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/JavaScript_certificate.jpg" alt="JS_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/jQuery_certificate.jpg" alt="JQuery_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/Udemy-Django(eng)(jpg).jpg" alt="Django_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/cert-PythonIntermediate Sololearn.png" alt="Python_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/cert-PythonDataStructures Sololearn.png" alt="Python_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/cert-Python for finance Sololearn.jpg" alt="Python_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/cert-Python-Stepic.png" alt="Python_sertificate">
-                </div>
-                <div class="card" style="width: 28rem;">
-                  <img class="card-img" src="static/portfolio/cert-html-Sololearn.jpg" alt="html_sertificate">
-                </div>
-              </div>
+        <!-- слайдер с сертификатами -->
+        <div class="row mb-4 justify-content-center align-items-center"> 
+          <h2 class="container_title">Certificates</h2>
+          <div class="card align-items-center bg-white w-100 shadow">
+            <div class="sliderContainer">
+              <button id="prev" class="sliderBtn" onclick="prev()"><img src="static/portfolio/left-arrow.png" width="60px"></button>
+                <img class="slider" onclick="slider_click()" src="static/portfolio/JavaScript_certificate.jpg" alt="JS_sertificate"
+                   width="400px" height="270px"/>
+                <button id="next" class="sliderBtn" onclick="next()"><img src="static/portfolio/right-arrow.png" width="60px"></button>
             </div>
+            <div class="popupSlider">
+              <img class="modalContent" onclick="modal_click()"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-
+    <!-- sector portfolio -->
     <div class="row justify-content-center bg-secondary">
-      <div class="col-12 pt-4 pb-5">
-
-        <h1 class="text-center text-white pt-3 pb-4">
-          <strong>
-            PORTFOLIO
-          </strong>
-        </h1>
-
+      <div class="col-12 mb-4">
+        <h2 class="text-white container_title">
+          Portfolio
+        </h2>
         <div class="container">
           <div class="row justify-content-center">
 
@@ -148,7 +127,6 @@
                 <p class="card-text">{{  project.description  }}</p>
                 <div class="row">
                   <div class="col text-center">
-
 
                   <a class="btn btn-lg btn-outline-dark w-50 mb-1" href="{% url 'portfolio:detailProject' project.id %}" role="button">
                     Details
@@ -176,7 +154,6 @@
           No projects yet
         </h4>
         {%  endif %}
-
       </div>
     </div>
   </div>
@@ -185,3 +162,5 @@
 </body>
 
 {%  endblock  %}
+
+<!-- footer из base.html -->
