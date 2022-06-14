@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from pickle import FALSE
 from tkinter import TRUE
 import dj_database_url
 
@@ -27,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-#f(gws@0&uv%7-c-6zg0_8+hh4#!kfwl)jq8r1h57p7(=dwori')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = TRUE
+DEBUG = FALSE
 
 ALLOWED_HOSTS = ['*']
 
