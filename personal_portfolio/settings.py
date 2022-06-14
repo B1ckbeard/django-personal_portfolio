@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'portfolio',
-    'jquery',
+    #'jquery',
 ]
 
 CLOUDINARY_STORAGE = {
