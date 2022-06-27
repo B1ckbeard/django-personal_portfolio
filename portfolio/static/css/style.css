@@ -8,8 +8,8 @@
   justify-content: center;
   text-align: center;
   position: relative;
-  margin-top: 130px;
-  margin-bottom: 30px;
+  margin-top: 140px;
+  margin-bottom: 20px;
 }
 .col_btn_prev{
   text-align: right;
@@ -26,7 +26,7 @@
 }
 .container_subtitle{
   color:whitesmoke;
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   margin-top: 15px;
   text-transform: uppercase;
@@ -171,4 +171,3 @@
 .span_green{
   color:#1ceba6;
 }
-
