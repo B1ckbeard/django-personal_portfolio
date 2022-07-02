@@ -21,6 +21,8 @@ function next(){
         num = 0;
     }
     $(".slider").attr("src", images[num]);
+    $(".bi-caret-right").attr("fill", "#d61313");
+    $(".bi-caret-left").attr("fill", "#1ceba6");
 }
 function prev(){
     num--;
@@ -28,6 +30,9 @@ function prev(){
         num = images.length-1;
     }
     $(".slider").attr("src", images[num]);
+    $(".bi-caret-left").attr("fill", "#d61313");
+    $(".bi-caret-right").attr("fill", "#1ceba6");
+
 }
 function slider_click(){
     $(".popupSlider").fadeIn(500);
