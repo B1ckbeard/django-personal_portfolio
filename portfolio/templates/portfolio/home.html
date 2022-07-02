@@ -26,7 +26,7 @@
       <h2 class="container_title">
         About <span class="span_green">me</span>
       </h2>
-      <div class="section_card w-100 align-items-center">
+      <div class="section_about_card w-100 align-items-center">
         <div class="row">
           <div class="col-xs-12 col-lg-4">
             <div class="about_container mx-auto">
@@ -71,14 +71,14 @@
                 <img class="slider shadow" onclick="slider_click()" src="static/portfolio/JavaScript_certificate.jpg" alt="JS_sertificate"
                   width="320px" height="220px"/>
                 <div class="row row_btns">
-                  <div class="col col_btn_prev">
+                  <div class="col col_btn col_btn_prev">
                     <button class="sliderBtn" id="prev" onclick="prev()">
                       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#1ceba6" class="bi bi-caret-left" viewBox="0 0 16 16">
                         <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
                       </svg>
                     </button>
                   </div>
-                  <div class="col col_btn_next">
+                  <div class="col col_btn col_btn_next">
                     <button class="sliderBtn" id="next" onclick="next()">
                       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#1ceba6" class="bi bi-caret-right" viewBox="0 0 16 16">
                         <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
@@ -105,8 +105,8 @@
         {%  if projects  %}
           {%  for project in projects  %}
             <div class="col-xs-12 col-lg-6">
-              <div class="projects_card w-100">
-                <div class="card-body">
+              <div class="projects_card">
+                <div class="card_body">
                   <div class="card_img_container">
                     <img src="{{  project.img.url  }}" class="card-img-top project_card_img" alt="project__card_img">
                   </div>

@@ -95,11 +95,6 @@
   max-width: 700px;
   cursor: pointer;
 }
-.projects_card{
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
-  border-style:none;
-}
 .card{
   position: static;
 }
@@ -157,16 +152,30 @@
   height: 250px;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 10px;
 }
 .project_card_img{
   border:1px solid rgba(0, 0, 0, 0.2);
-  border-radius:4px;
+  border-radius:16px;
 }
 .section_card{
   background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border-style:none;
+}
+.projects_card{
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   border-style:none;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.card_body{
+  display: block;
+  margin: auto;
 }
 .span_green{
   color:#1ceba6;
