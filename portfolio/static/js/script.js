@@ -2,9 +2,9 @@ const slider = document.querySelector(".slider");
 const modalContent = document.querySelector('.modalContent');
 
 let images = [
-    "static/portfolio/JavaScript_certificate.jpg",
+    "static/portfolio/JS_certificate.png",
     "static/portfolio/jQuery_certificate.jpg",
-    "static/portfolio/Udemy-Django(eng)(jpg).jpg",
+    "static/portfolio/Udemy-Django(rus)(jpg).jpg",
     "static/portfolio/cert-PythonIntermediate Sololearn.png",
     "static/portfolio/cert-PythonDataStructures Sololearn.png",
     "static/portfolio/cert-Python for finance Sololearn.jpg",
