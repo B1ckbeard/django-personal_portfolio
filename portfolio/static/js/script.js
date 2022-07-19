@@ -2,6 +2,7 @@ const slider = document.querySelector(".slider");
 const modalContent = document.querySelector('.modalContent');
 
 let images = [
+    "static/portfolio/Changellenge Shift+Enter 2022 - Дмитрий Евсин.png",
     "static/portfolio/JS_certificate.png",
     "static/portfolio/jQuery_certificate.jpg",
     "static/portfolio/Udemy-Django(rus)(jpg).jpg",
